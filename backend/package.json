@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:api": "node server.js",
-    "start:worker": "node src/workers/auditWorker.js"
-  },
+  "start:api": "node server.js",
+  "start:worker": "node workers/auditWorker.js"
+},
   "dependencies": {
     "@babel/parser": "^7.24.0",
     "@babel/traverse": "^7.24.0",
