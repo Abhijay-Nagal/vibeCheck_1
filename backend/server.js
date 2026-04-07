@@ -1,17 +1,22 @@
 const express = require("express");
 const cors = require("cors");
 const auditRoute = require("./routes/audit");
+
+// FIXED PATH: removed /src/
+require("./workers/auditWorker"); 
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/audit", auditRoute); // 👈 ADD HERE
+app.use("/audit", auditRoute);
 
 app.get("/test", (req, res) => {
-  res.send("Backend is working");
+  res.send("Backend API is working!");
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
