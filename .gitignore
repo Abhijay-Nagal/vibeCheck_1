@@ -1,0 +1,13 @@
+# Ignore all node_modules everywhere
+**/node_modules/
+
+# Ignore ALL environment variable files (CRITICAL SECURITY)
+**/.env
+
+# Ignore local SQLite databases
+**/dev.db
+**/*.db
+**/*.db-journal
+
+# Ignore Mac OS hidden files
+.DS_Store
